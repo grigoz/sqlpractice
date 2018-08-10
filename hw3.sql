@@ -21,4 +21,4 @@ WITH top_rated as (SELECT movieid, AVG(rating) as avg_rating, COUNT(userid) as c
 GROUP BY movieid HAVING COUNT(userid)>50 ORDER BY movieid ASC, avg_rating DESC LIMIT 150) 
 SELECT movieid, avg_rating into top_rated_tags from top_rated;
 
-\copy (select * from top_rated_tags) to '/data/ratings_file' with CSV header delimiter as ',';
+\copy (select * from top_rated_tags) to '/data/ratings_file' with CSV header delimiter as E'\t';
