@@ -17,3 +17,5 @@ print(avg_age)
 
 avg_age_gold = pd.read_sql("select AVG(cast(age as integer)) from public.characteristics INNER JOIN public.medals On characteristics.id=medals.id where age!='NA'and medal='Gold';",engine)
 print(avg_age_gold)
+
+export_csv = top_tall.to_csv('/Users/alexanderzayonts/Documents/top_tall.csv')
