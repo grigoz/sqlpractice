@@ -1,1 +1,1 @@
-# sqlpractice
+# pythonpractice
